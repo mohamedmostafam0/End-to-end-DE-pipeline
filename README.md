@@ -1,12 +1,5 @@
 # Realtime Data Streaming | End-to-End Data Engineering Project
 
-## Table of Contents
-- [Introduction](#introduction)
-- [System Architecture](#system-architecture)
-- [What You'll Learn](#what-youll-learn)
-- [Technologies](#technologies)
-- [Getting Started](#getting-started)
-- [Watch the Video Tutorial](#watch-the-video-tutorial)
 
 ## Introduction
 
@@ -49,7 +42,7 @@ The project is designed with the following components:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/airscholar/e2e-data-engineering.git
+    git clone https://github.com/mohamedmostafam0/End-to-end-DE-pipeline.git
     ```
 
 2. Navigate to the project directory:
@@ -59,11 +52,6 @@ The project is designed with the following components:
 
 3. Run Docker Compose to spin up the services:
     ```bash
-    docker-compose up
+    docker-compose up -d
     ```
 
-For more detailed instructions, please check out the video tutorial linked below.
-
-## Watch the Video Tutorial
-
-For a complete walkthrough and practical demonstration, check out our [YouTube Video Tutorial](https://www.youtube.com/watch?v=GqAcTrqKcrY).
