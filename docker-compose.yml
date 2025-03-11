@@ -10,6 +10,10 @@ services:
     environment:
       ZOOKEEPER_CLIENT_PORT: ${ZOOKEEPER_CLIENT_PORT}
       ZOOKEEPER_TICK_TIME: ${ZOOKEEPER_TICK_TIME}
+      ZOOKEEPER_SERVER_ID: 1
+      ZOOKEEPER_SYNC_LIMIT: 2
+      ZOOKEEPER_INIT_LIMIT: 5
+      ZOOKEEPER_SERVERS: zookeeper:2888:3888
     healthcheck:
       test: ["CMD", "bash", "-c", "echo 'ruok' | nc localhost 2181"]
       interval: 10s

@@ -1,0 +1,1119 @@
+===> User
+uid=1000(appuser) gid=1000(appuser) groups=1000(appuser)
+===> Configuring ...
+===> Running preflight checks ... 
+===> Check if Kafka is healthy ...
+[2025-03-11 12:25:29,976] INFO AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [broker:29092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ (org.apache.kafka.clients.admin.AdminClientConfig)
+[2025-03-11 12:25:30,914] INFO Kafka version: 7.4.0-ccs (org.apache.kafka.common.utils.AppInfoParser)
+[2025-03-11 12:25:30,916] INFO Kafka commitId: 30969fa33c185e88 (org.apache.kafka.common.utils.AppInfoParser)
+[2025-03-11 12:25:30,917] INFO Kafka startTimeMs: 1741695930905 (org.apache.kafka.common.utils.AppInfoParser)
+Using log4j config /etc/schema-registry/log4j.properties
+===> Launching ... 
+===> Launching schema-registry ... 
+[2025-03-11 12:25:36,651] INFO SchemaRegistryConfig values: 
+	access.control.allow.headers = 
+	access.control.allow.methods = 
+	access.control.allow.origin = 
+	access.control.skip.options = true
+	authentication.method = NONE
+	authentication.realm = 
+	authentication.roles = [*]
+	authentication.skip.paths = []
+	avro.compatibility.level = 
+	compression.enable = true
+	connector.connection.limit = 0
+	csrf.prevention.enable = false
+	csrf.prevention.token.endpoint = /csrf
+	csrf.prevention.token.expiration.minutes = 30
+	csrf.prevention.token.max.entries = 10000
+	debug = false
+	dos.filter.delay.ms = 100
+	dos.filter.enabled = false
+	dos.filter.insert.headers = true
+	dos.filter.ip.whitelist = []
+	dos.filter.managed.attr = false
+	dos.filter.max.idle.tracker.ms = 30000
+	dos.filter.max.requests.ms = 30000
+	dos.filter.max.requests.per.connection.per.sec = 25
+	dos.filter.max.requests.per.sec = 25
+	dos.filter.max.wait.ms = 50
+	dos.filter.throttle.ms = 30000
+	dos.filter.throttled.requests = 5
+	host.name = schema-registry
+	http2.enabled = true
+	idle.timeout.ms = 30000
+	inter.instance.headers.whitelist = []
+	inter.instance.listener.name = 
+	inter.instance.protocol = http
+	kafkagroup.heartbeat.interval.ms = 3000
+	kafkagroup.rebalance.timeout.ms = 300000
+	kafkagroup.session.timeout.ms = 10000
+	kafkastore.bootstrap.servers = [broker:29092]
+	kafkastore.checkpoint.dir = /tmp
+	kafkastore.checkpoint.version = 0
+	kafkastore.connection.url = 
+	kafkastore.group.id = 
+	kafkastore.init.timeout.ms = 60000
+	kafkastore.sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	kafkastore.sasl.kerberos.min.time.before.relogin = 60000
+	kafkastore.sasl.kerberos.service.name = 
+	kafkastore.sasl.kerberos.ticket.renew.jitter = 0.05
+	kafkastore.sasl.kerberos.ticket.renew.window.factor = 0.8
+	kafkastore.sasl.mechanism = GSSAPI
+	kafkastore.security.protocol = PLAINTEXT
+	kafkastore.ssl.cipher.suites = 
+	kafkastore.ssl.enabled.protocols = TLSv1.2,TLSv1.1,TLSv1
+	kafkastore.ssl.endpoint.identification.algorithm = 
+	kafkastore.ssl.key.password = [hidden]
+	kafkastore.ssl.keymanager.algorithm = SunX509
+	kafkastore.ssl.keystore.location = 
+	kafkastore.ssl.keystore.password = [hidden]
+	kafkastore.ssl.keystore.type = JKS
+	kafkastore.ssl.protocol = TLS
+	kafkastore.ssl.provider = 
+	kafkastore.ssl.trustmanager.algorithm = PKIX
+	kafkastore.ssl.truststore.location = 
+	kafkastore.ssl.truststore.password = [hidden]
+	kafkastore.ssl.truststore.type = JKS
+	kafkastore.timeout.ms = 500
+	kafkastore.topic = _schemas
+	kafkastore.topic.replication.factor = 3
+	kafkastore.topic.skip.validation = false
+	kafkastore.update.handlers = []
+	kafkastore.write.max.retries = 5
+	leader.connect.timeout.ms = 60000
+	leader.election.delay = false
+	leader.eligibility = true
+	leader.read.timeout.ms = 60000
+	listener.protocol.map = []
+	listeners = [http://0.0.0.0:8081]
+	master.eligibility = null
+	metadata.encoder.old.secret = null
+	metadata.encoder.secret = null
+	metadata.encoder.topic = _schema_encoders
+	metric.reporters = []
+	metrics.jmx.prefix = kafka.schema.registry
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	metrics.tag.map = []
+	mode.mutability = true
+	nosniff.prevention.enable = false
+	port = 8081
+	proxy.protocol.enabled = false
+	reject.options.request = false
+	request.logger.name = io.confluent.rest-utils.requests
+	request.queue.capacity = 2147483647
+	request.queue.capacity.growby = 64
+	request.queue.capacity.init = 128
+	resource.extension.class = []
+	resource.extension.classes = []
+	resource.static.locations = []
+	response.http.headers.config = 
+	response.mediatype.default = application/vnd.schemaregistry.v1+json
+	response.mediatype.preferred = [application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json]
+	rest.servlet.initializor.classes = []
+	schema.cache.expiry.secs = 300
+	schema.cache.size = 1000
+	schema.canonicalize.on.consume = []
+	schema.compatibility.level = backward
+	schema.providers = []
+	schema.registry.group.id = schema-registry
+	schema.registry.inter.instance.protocol = 
+	schema.registry.resource.extension.class = []
+	server.connection.limit = 0
+	shutdown.graceful.ms = 1000
+	ssl.cipher.suites = []
+	ssl.client.auth = false
+	ssl.client.authentication = NONE
+	ssl.enabled.protocols = []
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = [hidden]
+	ssl.keymanager.algorithm = 
+	ssl.keystore.location = 
+	ssl.keystore.password = [hidden]
+	ssl.keystore.reload = false
+	ssl.keystore.type = JKS
+	ssl.keystore.watch.location = 
+	ssl.protocol = TLS
+	ssl.provider = 
+	ssl.trustmanager.algorithm = 
+	ssl.truststore.location = 
+	ssl.truststore.password = [hidden]
+	ssl.truststore.type = JKS
+	suppress.stack.trace.response = true
+	thread.pool.max = 200
+	thread.pool.min = 8
+	websocket.path.prefix = /ws
+	websocket.servlet.initializor.classes = []
+ (io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig)
+[2025-03-11 12:25:36,940] INFO Logging initialized @4309ms to org.eclipse.jetty.util.log.Slf4jLog (org.eclipse.jetty.util.log)
+[2025-03-11 12:25:37,090] INFO Initial capacity 128, increased by 64, maximum capacity 2147483647. (io.confluent.rest.ApplicationServer)
+[2025-03-11 12:25:37,671] INFO Adding listener with HTTP/2: NamedURI{uri=http://0.0.0.0:8081, name='null'} (io.confluent.rest.ApplicationServer)
+[2025-03-11 12:25:38,847] INFO Found internal listener: NamedURI{uri=http://0.0.0.0:8081, name='null'} (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+[2025-03-11 12:25:38,853] INFO Setting my identity to version=1,host=schema-registry,port=8081,scheme=http,leaderEligibility=true (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+[2025-03-11 12:25:39,364] INFO AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [PLAINTEXT://broker:29092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	confluent.metrics.reporter.bootstrap.servers = kafka-0:9071
+	confluent.proxy.protocol.client.address = null
+	confluent.proxy.protocol.client.port = null
+	confluent.proxy.protocol.client.version = NONE
+	confluent.use.controller.listener = false
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	host.resolver.class = class org.apache.kafka.clients.DefaultHostResolver
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ (org.apache.kafka.clients.admin.AdminClientConfig)
+[2025-03-11 12:25:39,652] INFO Kafka version: 7.4.0-ce (org.apache.kafka.common.utils.AppInfoParser)
+[2025-03-11 12:25:39,653] INFO Kafka commitId: aee97a585bd06866 (org.apache.kafka.common.utils.AppInfoParser)
+[2025-03-11 12:25:39,653] INFO Kafka startTimeMs: 1741695939647 (org.apache.kafka.common.utils.AppInfoParser)
+[2025-03-11 12:25:41,863] INFO App info kafka.admin.client for adminclient-1 unregistered (org.apache.kafka.common.utils.AppInfoParser)
+[2025-03-11 12:25:41,878] INFO Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics)
+[2025-03-11 12:25:41,878] INFO Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics)
+[2025-03-11 12:25:41,878] INFO Metrics reporters closed (org.apache.kafka.common.metrics.Metrics)
+[2025-03-11 12:25:41,904] INFO Registering schema provider for AVRO: io.confluent.kafka.schemaregistry.avro.AvroSchemaProvider (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+[2025-03-11 12:25:41,904] INFO Registering schema provider for JSON: io.confluent.kafka.schemaregistry.json.JsonSchemaProvider (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+[2025-03-11 12:25:41,904] INFO Registering schema provider for PROTOBUF: io.confluent.kafka.schemaregistry.protobuf.ProtobufSchemaProvider (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+[2025-03-11 12:25:42,018] INFO Initializing KafkaStore with broker endpoints: PLAINTEXT://broker:29092 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
+[2025-03-11 12:25:42,251] WARN No value specified for metadata.encoder.secret, sensitive metadata will not be encoded (io.confluent.kafka.schemaregistry.storage.encoder.MetadataEncoderService)
+[2025-03-11 12:25:42,252] INFO AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [PLAINTEXT://broker:29092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	confluent.metrics.reporter.bootstrap.servers = kafka-0:9071
+	confluent.proxy.protocol.client.address = null
+	confluent.proxy.protocol.client.port = null
+	confluent.proxy.protocol.client.version = NONE
+	confluent.use.controller.listener = false
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	host.resolver.class = class org.apache.kafka.clients.DefaultHostResolver
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+ (org.apache.kafka.clients.admin.AdminClientConfig)
+[2025-03-11 12:25:42,258] INFO Kafka version: 7.4.0-ce (org.apache.kafka.common.utils.AppInfoParser)
+[2025-03-11 12:25:42,258] INFO Kafka commitId: aee97a585bd06866 (org.apache.kafka.common.utils.AppInfoParser)
+[2025-03-11 12:25:42,259] INFO Kafka startTimeMs: 1741695942258 (org.apache.kafka.common.utils.AppInfoParser)
+[2025-03-11 12:25:42,292] INFO Creating schemas topic _schemas (io.confluent.kafka.schemaregistry.storage.KafkaStore)
+[2025-03-11 12:25:42,298] WARN Creating the schema topic _schemas using a replication factor of 1, which is less than the desired one of 3. If this is a production environment, it's crucial to add more brokers and increase the replication factor of the topic. (io.confluent.kafka.schemaregistry.storage.KafkaStore)
+[2025-03-11 12:25:42,400] INFO App info kafka.admin.client for adminclient-2 unregistered (org.apache.kafka.common.utils.AppInfoParser)
+[2025-03-11 12:25:42,406] INFO Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics)
+[2025-03-11 12:25:42,411] INFO Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics)
+[2025-03-11 12:25:42,411] INFO Metrics reporters closed (org.apache.kafka.common.metrics.Metrics)
+[2025-03-11 12:25:42,432] INFO ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [PLAINTEXT://broker:29092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	confluent.proxy.protocol.client.address = null
+	confluent.proxy.protocol.client.port = null
+	confluent.proxy.protocol.client.version = NONE
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+ (org.apache.kafka.clients.producer.ProducerConfig)
+[2025-03-11 12:25:42,496] INFO Kafka version: 7.4.0-ce (org.apache.kafka.common.utils.AppInfoParser)
+[2025-03-11 12:25:42,496] INFO Kafka commitId: aee97a585bd06866 (org.apache.kafka.common.utils.AppInfoParser)
+[2025-03-11 12:25:42,496] INFO Kafka startTimeMs: 1741695942495 (org.apache.kafka.common.utils.AppInfoParser)
+[2025-03-11 12:25:42,511] INFO [Producer clientId=producer-1] Cluster ID: nNbdUDHsTfKfn1m3NWySkg (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:42,586] INFO Registered kafka:type=kafka.Log4jController MBean (kafka.utils.Log4jControllerRegistration$)
+[2025-03-11 12:25:42,587] INFO Kafka store reader thread starting consumer (io.confluent.kafka.schemaregistry.storage.KafkaStoreReaderThread)
+[2025-03-11 12:25:42,606] INFO ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [PLAINTEXT://broker:29092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = KafkaStore-reader-_schemas
+	client.rack = 
+	confluent.proxy.protocol.client.address = null
+	confluent.proxy.protocol.client.port = null
+	confluent.proxy.protocol.client.version = NONE
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = schema-registry-schema-registry-8081
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig)
+[2025-03-11 12:25:42,688] INFO Kafka version: 7.4.0-ce (org.apache.kafka.common.utils.AppInfoParser)
+[2025-03-11 12:25:42,688] INFO Kafka commitId: aee97a585bd06866 (org.apache.kafka.common.utils.AppInfoParser)
+[2025-03-11 12:25:42,688] INFO Kafka startTimeMs: 1741695942688 (org.apache.kafka.common.utils.AppInfoParser)
+[2025-03-11 12:25:42,696] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Cluster ID: nNbdUDHsTfKfn1m3NWySkg (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:42,701] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Assigned to partition(s): _schemas-0 (org.apache.kafka.clients.consumer.KafkaConsumer)
+[2025-03-11 12:25:42,706] INFO Seeking to beginning for all partitions (io.confluent.kafka.schemaregistry.storage.KafkaStoreReaderThread)
+[2025-03-11 12:25:42,708] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Seeking to earliest offset of partition _schemas-0 (org.apache.kafka.clients.consumer.internals.SubscriptionState)
+[2025-03-11 12:25:42,708] INFO Initialized last consumed offset to -1 (io.confluent.kafka.schemaregistry.storage.KafkaStoreReaderThread)
+[2025-03-11 12:25:42,724] INFO [kafka-store-reader-thread-_schemas]: Starting (io.confluent.kafka.schemaregistry.storage.KafkaStoreReaderThread)
+[2025-03-11 12:25:42,774] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Resetting the last seen epoch of partition _schemas-0 to 0 since the associated topicId changed from null to GOK3I-JcT_yMlaTwllJ5kw (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:42,949] INFO [Producer clientId=producer-1] Resetting the last seen epoch of partition _schemas-0 to 0 since the associated topicId changed from null to GOK3I-JcT_yMlaTwllJ5kw (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,044] INFO Wait to catch up until the offset at 0 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
+[2025-03-11 12:25:43,148] INFO Reached offset at 0 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
+[2025-03-11 12:25:43,148] INFO Joining schema registry with Kafka-based coordination (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+[2025-03-11 12:25:43,163] INFO Kafka version: 7.4.0-ce (org.apache.kafka.common.utils.AppInfoParser)
+[2025-03-11 12:25:43,163] INFO Kafka commitId: aee97a585bd06866 (org.apache.kafka.common.utils.AppInfoParser)
+[2025-03-11 12:25:43,163] INFO Kafka startTimeMs: 1741695943163 (org.apache.kafka.common.utils.AppInfoParser)
+[2025-03-11 12:25:43,178] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _schemas-0 to 0 since the associated topicId changed from null to GOK3I-JcT_yMlaTwllJ5kw (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,178] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-0 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,180] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-5 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,180] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-10 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,180] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-8 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,180] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-2 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,180] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-9 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,180] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-11 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,180] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-4 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,180] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-1 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,180] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-6 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,180] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-7 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,180] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-3 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,180] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-0 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,180] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-10 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,180] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-20 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-40 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-30 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-9 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-11 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-31 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-39 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-13 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-18 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-22 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-8 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-32 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-43 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-29 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-34 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-1 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-6 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-41 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-27 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-48 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-5 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-15 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-35 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-25 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-46 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-26 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-36 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-44 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-16 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-37 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-17 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-45 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-3 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-24 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,181] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-38 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,182] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-33 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,182] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-23 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,182] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-28 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,182] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-2 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,182] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-12 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,182] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-19 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,182] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-14 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,182] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-4 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,182] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-47 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,182] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-49 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,182] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-42 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,182] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-7 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,182] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-21 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,182] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent_balancer_api_state-0 to 0 since the associated topicId changed from null to Tah--T4DR5abL40WspGP1A (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,182] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-command-0 to 0 since the associated topicId changed from null to CzGYSlhpQT-li0IGTgu7Tw (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,189] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Cluster ID: nNbdUDHsTfKfn1m3NWySkg (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:25:43,190] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Discovered group coordinator broker:29092 (id: 2147483646 rack: null) (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
+[2025-03-11 12:25:43,199] INFO [Schema registry clientId=sr-1, groupId=schema-registry] (Re-)joining group (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
+[2025-03-11 12:25:43,217] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Request joining group due to: need to re-join with the given member-id: sr-1-711c8a11-ac26-4842-9eec-de5097efb79e (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
+[2025-03-11 12:25:43,217] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException) (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
+[2025-03-11 12:25:43,217] INFO [Schema registry clientId=sr-1, groupId=schema-registry] (Re-)joining group (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
+[2025-03-11 12:25:43,226] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Successfully joined group with generation Generation{generationId=1, memberId='sr-1-711c8a11-ac26-4842-9eec-de5097efb79e', protocol='v0'} (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
+[2025-03-11 12:25:43,262] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Successfully synced group in generation Generation{generationId=1, memberId='sr-1-711c8a11-ac26-4842-9eec-de5097efb79e', protocol='v0'} (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
+[2025-03-11 12:25:43,265] INFO Finished rebalance with leader election result: Assignment{version=1, error=0, leader='sr-1-711c8a11-ac26-4842-9eec-de5097efb79e', leaderIdentity=version=1,host=schema-registry,port=8081,scheme=http,leaderEligibility=true} (io.confluent.kafka.schemaregistry.leaderelector.kafka.KafkaGroupLeaderElector)
+[2025-03-11 12:25:43,312] INFO Wait to catch up until the offset at 1 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
+[2025-03-11 12:25:43,313] INFO Reached offset at 1 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
+[2025-03-11 12:25:43,428] INFO Binding SchemaRegistryRestApplication to all listeners. (io.confluent.rest.Application)
+[2025-03-11 12:25:43,781] INFO jetty-9.4.48.v20220622; built: 2022-06-21T20:42:25.880Z; git: 6b67c5719d1f4371b33655ff2d047d24e171e49a; jvm 11.0.18+10-LTS (org.eclipse.jetty.server.Server)
+[2025-03-11 12:25:43,935] INFO DefaultSessionIdManager workerName=node0 (org.eclipse.jetty.server.session)
+[2025-03-11 12:25:43,936] INFO No SessionScavenger set, using defaults (org.eclipse.jetty.server.session)
+[2025-03-11 12:25:43,938] INFO node0 Scavenging every 600000ms (org.eclipse.jetty.server.session)
+[2025-03-11 12:25:46,209] INFO HV000001: Hibernate Validator 6.1.7.Final (org.hibernate.validator.internal.util.Version)
+[2025-03-11 12:25:46,683] INFO Started o.e.j.s.ServletContextHandler@35eb4a3b{/,null,AVAILABLE} (org.eclipse.jetty.server.handler.ContextHandler)
+[2025-03-11 12:25:46,695] INFO Started o.e.j.s.ServletContextHandler@69391e08{/ws,null,AVAILABLE} (org.eclipse.jetty.server.handler.ContextHandler)
+[2025-03-11 12:25:46,710] INFO Started NetworkTrafficServerConnector@74eb909f{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8081} (org.eclipse.jetty.server.AbstractConnector)
+[2025-03-11 12:25:46,711] INFO Started @14092ms (org.eclipse.jetty.server.Server)
+[2025-03-11 12:25:46,712] INFO Schema Registry version: 7.4.0 commitId: 5698e3eec470f7e395341858f6a8f3d9d0629073 (io.confluent.kafka.schemaregistry.rest.SchemaRegistryMain)
+[2025-03-11 12:25:46,712] INFO Server started, listening for requests... (io.confluent.kafka.schemaregistry.rest.SchemaRegistryMain)
+[2025-03-11 12:29:43,859] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:43,861] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:43,865] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:43,874] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Cancelled in-flight FETCH request with correlation id 484 due to node 1 being disconnected (elapsed time since creation: 114ms, elapsed time since send: 114ms, request timeout: 30000ms) (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:43,889] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Error sending fetch request (sessionId=412339062, epoch=478) to node 1: (org.apache.kafka.clients.FetchSessionHandler)
+org.apache.kafka.common.errors.DisconnectException
+[2025-03-11 12:29:43,893] INFO [Producer clientId=producer-1] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:43,941] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:43,942] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:43,945] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 2147483646 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:43,947] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:43,950] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:43,950] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node -1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:43,947] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Group coordinator broker:29092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted. (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
+[2025-03-11 12:29:43,991] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:43,993] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,042] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,043] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,097] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,097] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,104] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,107] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,147] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,148] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,306] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,306] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,308] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,308] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,404] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,406] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,666] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,667] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,775] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,777] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,813] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:44,815] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:45,528] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:45,528] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:45,581] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:45,581] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:45,591] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:45,591] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:46,496] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:46,496] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:46,498] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:46,498] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:46,756] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:46,757] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:47,408] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:47,409] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:47,659] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:47,659] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:47,919] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:47,919] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:48,573] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:48,573] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:48,623] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:48,623] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:49,083] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:49,084] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:49,535] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:49,535] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:49,539] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:49,539] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:50,145] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:50,146] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:50,398] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:50,399] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:50,606] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:50,607] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:51,262] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:51,262] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:51,265] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:51,265] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:51,422] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:51,422] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:52,125] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:52,127] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:52,326] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:52,326] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:52,542] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:52,542] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:53,289] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:53,289] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:53,493] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:53,493] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:54,517] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:54,522] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:54,778] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:54,779] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:55,159] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:55,159] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:55,385] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:55,385] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:55,863] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:55,863] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:56,303] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:56,303] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:56,528] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:56,529] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:56,872] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:56,873] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:57,491] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:57,495] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:57,742] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:57,743] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:58,006] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:58,010] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:58,405] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:58,405] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:58,819] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:58,820] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:59,140] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:59,140] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:59,579] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:59,579] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:59,733] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:29:59,734] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:00,686] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:00,687] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:00,689] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:00,690] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:00,688] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:00,690] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:01,601] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:01,602] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:01,654] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:01,654] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:01,703] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:01,703] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:02,473] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:02,473] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:02,579] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:02,579] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:02,674] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:02,675] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:03,451] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:03,451] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:03,642] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:03,642] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:03,787] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:03,787] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:04,323] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:04,324] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:04,692] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:04,696] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:04,864] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:04,864] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:05,250] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:05,251] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:05,660] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:05,660] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:05,680] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:05,680] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:06,415] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:06,415] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:06,579] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:06,580] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:06,902] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:06,904] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:07,274] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:07,274] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:07,506] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:07,507] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:08,020] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:08,020] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:08,249] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:08,250] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:08,679] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:08,680] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:09,035] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:09,038] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:09,320] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:09,321] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:09,754] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:09,754] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:10,151] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:10,151] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:10,539] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:10,540] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:10,723] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:10,723] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:11,320] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:11,321] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:11,510] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:11,510] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:11,635] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:11,638] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:12,189] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:12,197] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:12,659] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:12,660] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:12,729] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:12,731] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:13,156] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:13,156] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:13,532] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:13,532] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:13,752] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:13,754] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:13,990] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:13,990] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:14,351] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:14,351] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:14,804] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:14,804] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:14,823] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:14,823] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:15,368] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:15,369] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:15,833] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:15,834] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:15,927] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:15,928] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:16,603] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:16,608] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:16,850] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:16,853] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:17,104] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:17,105] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:17,673] INFO [Producer clientId=producer-1] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:17,674] WARN [Producer clientId=producer-1] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:17,772] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:17,772] WARN [Schema registry clientId=sr-1, groupId=schema-registry] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:18,120] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Node 1 disconnected. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:18,123] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Connection to node 1 (broker/172.18.0.4:29092) could not be established. Broker may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:28,001] WARN [Producer clientId=producer-1] Error while fetching metadata with correlation id 7 : {_schemas=UNKNOWN_TOPIC_OR_PARTITION} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:28,111] WARN [Producer clientId=producer-1] Error while fetching metadata with correlation id 8 : {_schemas=UNKNOWN_TOPIC_OR_PARTITION} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:28,219] WARN [Producer clientId=producer-1] Error while fetching metadata with correlation id 9 : {_schemas=UNKNOWN_TOPIC_OR_PARTITION} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:28,284] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Error while fetching metadata with correlation id 486 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:28,351] WARN [Producer clientId=producer-1] Error while fetching metadata with correlation id 10 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:28,494] WARN [Producer clientId=producer-1] Error while fetching metadata with correlation id 11 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:28,499] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:28,562] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Error while fetching metadata with correlation id 488 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:28,672] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:28,686] WARN [Producer clientId=producer-1] Error while fetching metadata with correlation id 12 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:28,727] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Error while fetching metadata with correlation id 490 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:28,736] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:28,748] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:28,758] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:28,767] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:28,779] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:28,790] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:28,824] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:28,836] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:28,857] WARN [Producer clientId=producer-1] Error while fetching metadata with correlation id 13 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:28,883] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Error while fetching metadata with correlation id 499 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:28,893] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:28,927] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:28,959] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:28,981] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,005] WARN [Producer clientId=producer-1] Error while fetching metadata with correlation id 14 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:29,014] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Error while fetching metadata with correlation id 504 : {_schemas=UNKNOWN_TOPIC_OR_PARTITION} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:29,019] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,033] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,054] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,069] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,087] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,104] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,118] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,129] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Error while fetching metadata with correlation id 512 : {_schemas=UNKNOWN_TOPIC_OR_PARTITION} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:29,135] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,160] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,161] WARN [Producer clientId=producer-1] Error while fetching metadata with correlation id 15 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:29,170] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,188] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,212] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,222] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,231] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,278] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Error while fetching metadata with correlation id 520 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:29,305] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,318] WARN [Producer clientId=producer-1] Error while fetching metadata with correlation id 16 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:29,324] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,361] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,419] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,483] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Error while fetching metadata with correlation id 525 : {_schemas=UNKNOWN_TOPIC_OR_PARTITION} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:29,507] WARN [Producer clientId=producer-1] Error while fetching metadata with correlation id 17 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:29,539] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,574] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,629] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,684] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Error while fetching metadata with correlation id 529 : {_schemas=UNKNOWN_TOPIC_OR_PARTITION} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:29,709] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,711] WARN [Producer clientId=producer-1] Error while fetching metadata with correlation id 18 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:29,731] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,752] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,758] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,764] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,769] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,794] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,817] WARN [Producer clientId=producer-1] Error while fetching metadata with correlation id 19 : {_schemas=UNKNOWN_TOPIC_OR_PARTITION} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:29,823] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Error while fetching metadata with correlation id 537 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:29,828] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,839] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,848] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,855] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,863] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,879] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,906] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,921] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,942] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,958] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Error while fetching metadata with correlation id 547 : {_schemas=UNKNOWN_TOPIC_OR_PARTITION} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:29,962] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,965] WARN [Producer clientId=producer-1] Error while fetching metadata with correlation id 20 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:29,975] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:29,984] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,002] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,013] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,020] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,037] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,044] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,048] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,060] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,081] WARN [Producer clientId=producer-1] Error while fetching metadata with correlation id 21 : {_schemas=UNKNOWN_TOPIC_OR_PARTITION} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:30,112] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Error while fetching metadata with correlation id 558 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:30,131] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,153] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,166] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,179] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,191] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,221] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,228] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Error while fetching metadata with correlation id 565 : {_schemas=UNKNOWN_TOPIC_OR_PARTITION} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:30,245] WARN [Producer clientId=producer-1] Error while fetching metadata with correlation id 22 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:30,269] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,296] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,326] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,376] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Error while fetching metadata with correlation id 569 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:30,384] WARN [Producer clientId=producer-1] Error while fetching metadata with correlation id 23 : {_schemas=UNKNOWN_TOPIC_OR_PARTITION} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:30,414] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,431] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,449] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,460] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,511] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,582] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Error while fetching metadata with correlation id 575 : {_schemas=UNKNOWN_TOPIC_OR_PARTITION} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:30,597] WARN [Producer clientId=producer-1] Error while fetching metadata with correlation id 24 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:30,605] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,642] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,667] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,673] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,689] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,712] WARN [Producer clientId=producer-1] Error while fetching metadata with correlation id 25 : {_schemas=UNKNOWN_TOPIC_OR_PARTITION} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:30,726] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Error while fetching metadata with correlation id 581 : {_schemas=LEADER_NOT_AVAILABLE} (org.apache.kafka.clients.NetworkClient)
+[2025-03-11 12:30:30,735] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,743] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,746] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,751] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,755] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,760] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,767] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,772] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,781] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,787] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,802] WARN [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Received unknown topic or partition error in fetch for partition _schemas-0 (org.apache.kafka.clients.consumer.internals.Fetcher)
+[2025-03-11 12:30:30,861] INFO [Producer clientId=producer-1] Resetting the last seen epoch of partition _schemas-0 to 0 since the associated topicId changed from null to GOK3I-JcT_yMlaTwllJ5kw (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,899] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _schemas-0 to 0 since the associated topicId changed from null to GOK3I-JcT_yMlaTwllJ5kw (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,900] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-0 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,900] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-5 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,900] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-10 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,900] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-8 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,900] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-2 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,900] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-9 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,900] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-11 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,900] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-1 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,900] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-4 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,900] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-6 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,900] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-7 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,900] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-telemetry-metrics-3 to 0 since the associated topicId changed from null to rOFktvQdRjyrvc79Uqj_3Q (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,901] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-0 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,901] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-10 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,901] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-20 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,901] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-40 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,902] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-30 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,902] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-9 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,903] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-11 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,903] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-31 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,903] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-39 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,903] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-13 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,903] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-18 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,903] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-22 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,903] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-8 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,903] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-32 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,903] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-43 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,903] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-29 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,903] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-34 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,903] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-1 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,903] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-6 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,904] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-41 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,904] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-27 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,904] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-48 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,904] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-5 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,904] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-15 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,904] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-35 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,904] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-25 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,904] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-46 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,904] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-26 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,904] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-36 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,904] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-44 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,904] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-16 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,905] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-37 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,905] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-17 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,905] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-45 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,906] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-3 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,906] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-24 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,906] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-38 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,906] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-33 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,906] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-23 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,906] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-28 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,906] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-2 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,907] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-12 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,907] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-19 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,907] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-14 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,907] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-4 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,907] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-47 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,907] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-49 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,907] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-42 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,907] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-7 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,907] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-21 to 0 since the associated topicId changed from null to CRPqSFGfTsa3P9xdqli4WQ (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,907] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent_balancer_api_state-0 to 0 since the associated topicId changed from null to Tah--T4DR5abL40WspGP1A (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,907] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _confluent-command-0 to 0 since the associated topicId changed from null to CzGYSlhpQT-li0IGTgu7Tw (org.apache.kafka.clients.Metadata)
+[2025-03-11 12:30:30,933] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Discovered group coordinator broker:29092 (id: 2147483646 rack: null) (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
+[2025-03-11 12:30:31,488] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Resetting the last seen epoch of partition _schemas-0 to 0 since the associated topicId changed from null to GOK3I-JcT_yMlaTwllJ5kw (org.apache.kafka.clients.Metadata)
