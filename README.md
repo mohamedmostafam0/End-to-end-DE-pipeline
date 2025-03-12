@@ -78,9 +78,7 @@ End-to-end-DE-pipeline/
 - **Spark Master UI**: [http://localhost:9090](http://localhost:9090)
 - **Schema Registry**: [http://localhost:8081](http://localhost:8081)
 
-## Next Steps
-- Add **Data Validation** using **Great Expectations**.
-- Implement **Data Visualization** using **Apache Superset**.
+## Next Step(s)
 - Deploy to **Kubernetes** for production-scale execution.
 
 
