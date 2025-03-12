@@ -14,6 +14,8 @@ The system is composed of several components that work together:
 6. **Apache Cassandra** – Stores processed data for scalable analytics.
 7. **Docker** – Containerizes all components for easy deployment.
 
+![Data engineering architecture](https://github.com/user-attachments/assets/f3d4b867-8206-42c3-9f87-3a37d37fcbf9)
+
 ## Technology Stack
 - **Apache Kafka** – Message broker for real-time streaming.
 - **Apache Spark** – Streaming and batch data processing.
