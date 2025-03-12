@@ -1,49 +1,88 @@
-# Realtime Data Streaming | End-to-End Data Engineering Project
-
+# End-to-End Data Engineering Pipeline
 
 ## Introduction
+This project demonstrates a complete **End-to-End Data Engineering Pipeline** for real-time data processing. It integrates multiple technologies including **Apache Kafka, Apache Spark, Apache Airflow, PostgreSQL, Cassandra, and Docker** to handle data ingestion, transformation, and storage.
 
-This project serves as a comprehensive guide to building an end-to-end data engineering pipeline. It covers each stage from data ingestion to processing and finally to storage, utilizing a robust tech stack that includes Apache Airflow, Python, Apache Kafka, Apache Zookeeper, Apache Spark, and Cassandra. Everything is containerized using Docker for ease of deployment and scalability.
+## Architecture Overview
+The system is composed of several components that work together:
 
-## System Architecture
+1. **Data Source** – Uses the `randomuser.me` API to fetch and simulate user data.
+2. **Apache Airflow** – Orchestrates data ingestion and transformation.
+3. **Apache Kafka & Zookeeper** – Facilitates real-time data streaming.
+4. **Apache Spark** – Processes streamed data and loads it into the database.
+5. **PostgreSQL** – Stores raw ingested data.
+6. **Apache Cassandra** – Stores processed data for scalable analytics.
+7. **Docker** – Containerizes all components for easy deployment.
 
-![System Architecture](https://github.com/airscholar/e2e-data-engineering/blob/main/Data%20engineering%20architecture.png)
-
-The project is designed with the following components:
-
-- **Data Source**: We use `randomuser.me` API to generate random user data for our pipeline.
-- **Apache Airflow**: Responsible for orchestrating the pipeline and storing fetched data in a PostgreSQL database.
-- **Apache Kafka and Zookeeper**: Used for streaming data from PostgreSQL to the processing engine.
-- **Control Center and Schema Registry**: Helps in monitoring and schema management of our Kafka streams.
-- **Apache Spark**: For data processing with its master and worker nodes.
-- **Cassandra**: Where the processed data will be stored.
-
-
-## Technologies
-
-- Apache Airflow
-- Python
-- Apache Kafka
-- Apache Zookeeper
-- Apache Spark
-- Cassandra
-- PostgreSQL
-- Docker
+## Technology Stack
+- **Apache Kafka** – Message broker for real-time streaming.
+- **Apache Spark** – Streaming and batch data processing.
+- **Apache Cassandra** – Scalable NoSQL database for processed data.
+- **PostgreSQL** – SQL database for raw data storage.
+- **Apache Airflow** – Workflow orchestration and task scheduling.
+- **Docker & Docker Compose** – Containerization for easy deployment.
 
 ## Getting Started
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/mohamedmostafam0/End-to-end-DE-pipeline.git
-    ```
+### 1. Clone the Repository
+```bash
+git clone https://github.com/mohamedmostafam0/End-to-end-DE-pipeline.git
+cd End-to-end-DE-pipeline
+```
+### 2. Set Up Environment Variables
+Create a .env file in the root directory and define the required environment variables:
+```bash
+POSTGRES_USER=airflow
+POSTGRES_PASSWORD=airflow
+POSTGRES_DB=airflow
 
-2. Navigate to the project directory:
-    ```bash
-    cd e2e-data-engineering
-    ```
+KAFKA_BROKER=broker:29092
+KAFKA_TOPIC=users_created
 
-3. Run Docker Compose to spin up the services:
-    ```bash
-    docker-compose up -d
-    ```
+CASSANDRA_USERNAME=cassandra
+CASSANDRA_PASSWORD=cassandra
+```
+### 3. Run the Pipeline
+Ensure Docker is running, then start the pipeline:
+```bash
+docker compose up -d
+```
+### 4. Check Running Containers
+Verify that all services are up and running:
+```bash
+docker ps
+```
+
+## Project Structure
+```
+End-to-end-DE-pipeline/
+│── dags/                     # Apache Airflow DAGs for orchestrating workflows
+│── script/                   # Entry point scripts for Airflow containers
+│── spark_stream.py           # Apache Spark streaming job
+│── docker-compose.yml        # Docker configuration for all services
+│── requirements.txt          # Python dependencies
+│── README.md                 # Project documentation
+```
+
+
+## How It Works
+1. **Airflow DAGs** extract data from the API and insert it into PostgreSQL.
+2. **Kafka Producer** picks up new records and streams them to Kafka topics.
+3. **Kafka Consumer (Spark Streaming Job)** reads the real-time data.
+4. **Spark processes** the data and stores it in Cassandra.
+5. **Cassandra stores processed records** for scalable analytics.
+
+## Monitoring
+- **Kafka UI**: [http://localhost:9021](http://localhost:9021)
+- **Airflow UI**: [http://localhost:8080](http://localhost:8080)
+- **Spark Master UI**: [http://localhost:9090](http://localhost:9090)
+- **Schema Registry**: [http://localhost:8081](http://localhost:8081)
+
+## Next Steps
+- Add **Data Validation** using **Great Expectations**.
+- Implement **Data Visualization** using **Apache Superset**.
+- Deploy to **Kubernetes** for production-scale execution.
+
+
+
 
